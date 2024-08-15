@@ -9,7 +9,7 @@ namespace API.Controllers;
 
 public class UsersController(DataContext context) : BaseApiController //tip: use primary constructor c# 12 new concept
 {
-    [Authorize]
+    [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
